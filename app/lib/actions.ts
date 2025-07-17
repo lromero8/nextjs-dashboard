@@ -29,7 +29,7 @@ const FormSchema = z.object({
   status: z.enum(['pending', 'paid'], {
     invalid_type_error: 'Please select an invoice status.',
   }),
-  date: z.string(),
+  date: z.string()
 });
  
 const CreateInvoice = FormSchema.omit({ id: true, date: true });
